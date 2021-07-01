@@ -31,7 +31,8 @@ public class Onboarding extends AppCompatActivity {
         daftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Onboarding.this, BottomActivity.class));
+                startActivity(new Intent(Onboarding.this, Login.class));
+                finish();
             }
         });
     }

@@ -7,17 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.xirpl4.project_kk4b.R;
@@ -30,7 +24,16 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        RecyclerView mRecyclerView = (RecyclerView) root.findViewById(R.id.recyclerView);
+        View itemT = root.findViewById(R.id.itemintomorrow);
+
+        itemT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), DetailActivity.class));
+            }
+        });
+
+        RecyclerView mRecyclerView = root.findViewById(R.id.recyclerView);
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
@@ -61,22 +64,6 @@ public class HomeFragment extends Fragment {
             this.dataList = data;
         }
 
-        public class ViewHolder extends RecyclerView.ViewHolder {
-            TextView time;
-            TextView title;
-            TextView subtitle;
-            ImageView image;
-
-            public ViewHolder(View itemView) {
-                super(itemView);
-
-                this.time = (TextView) itemView.findViewById(R.id.item_txttime);
-                this.title = (TextView) itemView.findViewById(R.id.item_title);
-                this.subtitle = (TextView) itemView.findViewById(R.id.item_subtitle);
-                this.image = (ImageView) itemView.findViewById(R.id.item_image);
-            }
-        }
-
         @Override
         public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycler, parent, false);
@@ -98,6 +85,7 @@ public class HomeFragment extends Fragment {
 //                  Toast.makeText(getActivity(), "Item " + position + " is clicked.", Toast.LENGTH_SHORT).show();
                     Context context = v.getContext();
                     Intent intent = new Intent(context, DetailActivity.class);
+                    intent.putExtra("IMAGES", dataList.get(position).getImage());
                     context.startActivity(intent);
                 }
             });
@@ -106,6 +94,22 @@ public class HomeFragment extends Fragment {
         @Override
         public int getItemCount() {
             return dataList.size();
+        }
+
+        public class ViewHolder extends RecyclerView.ViewHolder {
+            TextView time;
+            TextView title;
+            TextView subtitle;
+            ImageView image;
+
+            public ViewHolder(View itemView) {
+                super(itemView);
+
+                this.time = itemView.findViewById(R.id.item_txttime);
+                this.title = itemView.findViewById(R.id.item_title);
+                this.subtitle = itemView.findViewById(R.id.item_subtitle);
+                this.image = itemView.findViewById(R.id.item_image);
+            }
         }
     }
 }

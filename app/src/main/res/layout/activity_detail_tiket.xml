@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Blue_default_app"
+    tools:context=".DetailTiket">
+
+    <include
+        android:id="@+id/toolbar_detailTiket"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="?attr/actionBarSize" />
+
+    <ImageView
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tiketKembali_button"
+        android:layout_below="@+id/toolbar_detailTiket"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_tiket" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tiketKembali_button"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:outlineProvider="none"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="kembali"
+            android:textColor="@color/Blue_default_app"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

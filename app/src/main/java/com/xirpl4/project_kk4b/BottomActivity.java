@@ -1,13 +1,10 @@
 package com.xirpl4.project_kk4b;
 
 import android.os.Bundle;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class BottomActivity extends AppCompatActivity {
@@ -23,5 +20,4 @@ public class BottomActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(navView, navController);
     }
-
 }

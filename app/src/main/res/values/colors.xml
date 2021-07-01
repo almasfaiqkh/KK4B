@@ -8,4 +8,8 @@
     <color name="white_grey">#FCFCFC</color>
     <color name="black">#000000</color>
     <color name="black2">#222222</color>
+    <color name="black3">#202020</color>
+    <color name="grey">#B0B0B0</color>
+    <color name="red">#FE2E2E</color>
+    <color name="red_maroon">#B11F1F</color>
 </resources>

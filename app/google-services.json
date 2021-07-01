@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "779003907772",
+    "firebase_url": "https://project-kk4b.firebaseio.com",
+    "project_id": "project-kk4b",
+    "storage_bucket": "project-kk4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779003907772:android:2d92ff8ad8e46cdf584ab9",
+        "android_client_info": {
+          "package_name": "com.xirpl4.project_kk4b"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779003907772-ch419g1gc8fi1qdn498f364b2kjp9s23.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.xirpl4.project_kk4b",
+            "certificate_hash": "ca8edb354a9367f0f6d35a6c6ceb125ff9efd6f6"
+          }
+        },
+        {
+          "client_id": "779003907772-9gmj3pfd3g8ehljs7kfgidefak383bp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbTR8otaGkUJ3IN54wtiy4il1nij5fkX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779003907772-9gmj3pfd3g8ehljs7kfgidefak383bp8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
